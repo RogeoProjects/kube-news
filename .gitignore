@@ -102,5 +102,6 @@ node_modules/
 
 # # TernJS port file
 # .tern-port
+# algo
 
 *.Identifier
