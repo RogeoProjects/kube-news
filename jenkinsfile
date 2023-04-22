@@ -1,0 +1,11 @@
+pipeline {
+    agent anystages {
+        stage ('Build Docker Image') {
+            steps {
+                script {
+                    dockerapp = docker.build("rlsilva/kubenode:${env.BUILD_ID}", '-f ./src/Dockerfile ./src')
+                }
+            }
+        }
+    }
+}
